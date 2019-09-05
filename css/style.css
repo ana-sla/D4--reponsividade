@@ -9,3 +9,33 @@ body{
 
 
 }
+
+nav{
+    align-items: center;
+    background-color: #d3bbbe;
+    grid-area: nav;
+    display: flex;
+    height: 45px;
+    justify-content: space-between;
+    padding: 0 10px;
+    
+
+}
+
+nav div{
+    display: flex;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+}
+
+nav div span{
+    background-color: black;
+    height: 3px;
+    width: 35px;
+
+}
+
+nav img{
+    width: 35px;
+}
