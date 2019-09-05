@@ -6,18 +6,19 @@ body{
                          'section'
                          'footer'; 
     grid-template-columns: 100vw;
-
-
 }
+
 header{
     background-image: url(../images/siri.png);
     grid-area: banner;
     height: 220px;
+    background-size: cover;
 
 }
 
 main{
     grid-area: main;
+    background-color: #d3bbd3;
 }
 
 main h1, main p{
@@ -31,15 +32,18 @@ nav{
     height: 45px;
     justify-content: space-between;
     padding: 0 10px;
-    
-
 }
 
-nav div{
+    
+
+nav div:nth-child(2){
     display: flex;
     flex-direction: column;
     height: 20px;
     justify-content: space-between;
+}
+nav  div:nth-child(3){
+    display: none;
 }
 
 nav div span{
@@ -51,4 +55,52 @@ nav div span{
 
 nav img{
     width: 35px;
+}
+
+section{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    grid-area: section;
+}
+
+section .funcionarios{
+    display: flex;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    justify-content: center;
+}
+
+section .funcionarios div img{
+    width: 100px;
+} 
+
+
+
+@media(min-width:580px){
+    
+    header{
+        background-image: url(../images/wall.jpg);
+    }
+
+    nav div a{
+        font-size: 14pt;
+        text-decoration: none;
+    }
+
+    nav div:nth-child(2){
+        display: none;
+    }
+
+    nav div:nth-child(3){
+        display: block;
+    }
+    section .funcionarios{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        width: 100vw;
+    }
+
+
 }
